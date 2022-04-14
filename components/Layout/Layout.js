@@ -3,7 +3,7 @@
 
 
 
-export default function Layout() {
+export default function Layout({children}) {
     return (
 
         <>
@@ -12,7 +12,9 @@ export default function Layout() {
                     <source src='assets/videos/bg.mp4' type='video/mp4' />
                 </video>
                 <div className="overlay-bg"></div>
+                {children}
             </div>
+            
 
         </>
     )

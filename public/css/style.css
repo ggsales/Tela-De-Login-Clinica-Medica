@@ -7826,7 +7826,49 @@ textarea.form-control-lg {
   object-fit: cover;
   height: 100vh; }
 
-.teste {
-  margin-top: 100vh; }
+#formWrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%; }
+  #formWrapper form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-bottom: 200px;
+    padding-top: 50px;
+    border-radius: 20px; }
+    #formWrapper form input {
+      width: 300px;
+      height: 30px;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      border: none;
+      background-color: #5c93da;
+      font-size: 13px;
+      padding-left: 10px; }
+    #formWrapper form button {
+      width: 250px;
+      height: 30px;
+      color: #fff;
+      border-radius: 30px;
+      border: none;
+      font-family: "Inter", sans-serif;
+      background-image: linear-gradient(to right, #4c92c4 0%, #3CD3AD 51%, #4CB8C4 100%);
+      background-size: 200% auto;
+      transition: 0.5s;
+      display: block;
+      box-shadow: 0 0 10px #eee;
+      font-weight: 700; }
+      #formWrapper form button:hover {
+        background-position: right center;
+        color: #444242;
+        text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */
