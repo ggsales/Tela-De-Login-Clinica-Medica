@@ -17,4 +17,10 @@
     bottom: 0;
     object-fit: cover;
     height: 100vh;
+    @media #{$sm}{
+        height: 700px
+     }
+     @media #{$xs-v}{
+       height: 700px;
+     }
 }

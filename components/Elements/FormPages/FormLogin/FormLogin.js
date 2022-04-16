@@ -42,15 +42,7 @@ export default function FormLogin() {
                 </div>
                 {currentLogin === "paciente" && <LoginPatient />}
                 {currentLogin === "medico" && <LoginDoctor />}
-                <div className="links-content">
-                    <div className="box-links">
-                        <h5>Não tem cadastro?</h5>
-                        <div className="links-position">
-                            <a href="#">Cadastre-se</a>
-                            <a href="#">Esqueci minha senha</a>
-                        </div>
-                    </div>
-                </div>
+             
             </form>
         </div>
 

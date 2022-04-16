@@ -8,7 +8,6 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title> Login Clínica </title>
-
       </Head>
       <Component {...pageProps} />
 

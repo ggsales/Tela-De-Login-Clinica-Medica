@@ -150,6 +150,9 @@ $lg : 'only screen and (min-width: 992px) and (max-width: 1200px)';
 $md:'only screen and (min-width: 768px) and (max-width: 991px)';
 $sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
 $xs:'(max-width: 575px)';
+$xs-mini:"(max-width:321px)";
+$xs-v:"(min-height:319px) and (max-height:413px)";
+
 $xxl1: '(min-width: 1440px) and(max-width: 1919px)';
 $xxl2: '(min-width: 1920px)';
 

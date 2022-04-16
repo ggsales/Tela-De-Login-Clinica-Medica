@@ -5,6 +5,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -7825,6 +7826,15 @@ textarea.form-control-lg {
   bottom: 0;
   object-fit: cover;
   height: 100vh; }
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    #videoBG {
+      height: 700px; } }
+  @media (min-height: 319px) and (max-height: 413px) {
+    #videoBG {
+      height: 700px; } }
+
+body {
+  font-family: "Roboto", sans-serif; }
 
 #formWrapper {
   position: absolute;
@@ -7834,14 +7844,36 @@ textarea.form-control-lg {
   justify-content: center;
   align-items: center;
   margin-top: 5%; }
+  @media only screen and (min-width: 1400px) {
+    #formWrapper {
+      margin-top: 7%; } }
+  @media (max-width: 575px) {
+    #formWrapper {
+      margin-top: 15%; } }
+  @media (max-width: 321px) {
+    #formWrapper {
+      margin-top: 5%; } }
   #formWrapper form {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.7);
-    padding-bottom: 100px;
+    padding-bottom: 30px;
     padding-top: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
     border-radius: 20px; }
+    @media only screen and (min-width: 1400px) {
+      #formWrapper form {
+        padding-top: 60px;
+        padding-bottom: 50px;
+        padding-left: 10px;
+        padding-right: 10px; } }
+    @media (max-width: 321px) {
+      #formWrapper form {
+        padding-top: 30px;
+        padding-left: 0px;
+        padding-right: 0; } }
     #formWrapper form .box-title {
       display: flex;
       justify-content: center;
@@ -7851,15 +7883,24 @@ textarea.form-control-lg {
         font-size: 35px;
         margin-bottom: 10px;
         color: #5e89b0; }
+        @media only screen and (min-width: 1400px) {
+          #formWrapper form .box-title i {
+            font-size: 45px; } }
       #formWrapper form .box-title h2, #formWrapper form .box-title .h2 {
         font-size: 20px;
         text-transform: uppercase;
         color: #5e89b0;
         font-weight: 700; }
+        @media only screen and (min-width: 1400px) {
+          #formWrapper form .box-title h2, #formWrapper form .box-title .h2 {
+            font-size: 25px; } }
       #formWrapper form .box-title h4, #formWrapper form .box-title .h4 {
         font-size: 13px;
         text-align: center;
         font-weight: 700; }
+        @media only screen and (min-width: 1400px) {
+          #formWrapper form .box-title h4, #formWrapper form .box-title .h4 {
+            font-size: 16px; } }
     #formWrapper form input {
       width: 300px;
       height: 30px;
@@ -7871,6 +7912,10 @@ textarea.form-control-lg {
       background-color: #5c93da;
       font-size: 13px;
       padding-left: 10px; }
+      @media only screen and (min-width: 1400px) {
+        #formWrapper form input {
+          width: 350px;
+          height: 35px; } }
       #formWrapper form input::placeholder {
         color: #e4dfdf; }
     #formWrapper form button {
@@ -7879,7 +7924,6 @@ textarea.form-control-lg {
       color: #fff;
       border-radius: 30px;
       border: none;
-      font-family: "Inter", sans-serif;
       background-image: linear-gradient(to right, #4c92c4 0%, #3CD3AD 51%, #4CB8C4 100%);
       background-size: 200% auto;
       transition: 0.5s;
@@ -7895,6 +7939,12 @@ textarea.form-control-lg {
       flex-direction: row;
       margin-bottom: 20px;
       padding: 10px; }
+      @media only screen and (min-width: 1400px) {
+        #formWrapper form .btn-grouping {
+          margin-bottom: 30px; } }
+      @media (max-width: 321px) {
+        #formWrapper form .btn-grouping {
+          padding: 0; } }
       #formWrapper form .btn-grouping button {
         width: 150px;
         height: 28px;
@@ -7906,8 +7956,23 @@ textarea.form-control-lg {
         align-items: baseline;
         font-size: 15px;
         border: 2px solid transparent; }
+        @media only screen and (min-width: 1400px) {
+          #formWrapper form .btn-grouping button {
+            height: 32px; } }
         #formWrapper form .btn-grouping button:first-child {
           margin-right: 10px; }
+        @media (max-width: 575px) {
+          #formWrapper form .btn-grouping button {
+            margin-top: 20px;
+            width: 140px;
+            height: 26px;
+            font-size: 13px; } }
+        @media (max-width: 321px) {
+          #formWrapper form .btn-grouping button {
+            margin-top: 20px;
+            width: 130px;
+            font-size: 12px;
+            height: 25px; } }
       #formWrapper form .btn-grouping .actived {
         background-image: linear-gradient(to right, #4c92c4 0%, #3CD3AD 51%, #4CB8C4 100%);
         transition: 0.5s linear;
@@ -7916,16 +7981,26 @@ textarea.form-control-lg {
         border: 2px solid #fff; }
     #formWrapper form .links-content {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       width: 100%;
-      margin-top: 30px; }
-      #formWrapper form .links-content .box-links {
-        width: 100%; }
-        #formWrapper form .links-content .box-links h5, #formWrapper form .links-content .box-links .h5 {
-          font-size: 13px; }
+      margin-top: 40px;
+      padding: 10px; }
+      @media only screen and (min-width: 1400px) {
+        #formWrapper form .links-content {
+          margin-top: 50px; } }
+      #formWrapper form .links-content h5, #formWrapper form .links-content .h5 {
+        font-size: 15px; }
       #formWrapper form .links-content .links-position {
         display: flex;
         justify-content: space-between;
         width: 100%; }
+        #formWrapper form .links-content .links-position a {
+          text-decoration: none;
+          color: #4a7c9f;
+          font-weight: 700;
+          font-size: 13px; }
+          #formWrapper form .links-content .links-position a:hover {
+            text-decoration: underline;
+            color: #2291e0; }
 
 /*# sourceMappingURL=style.css.map */

@@ -14,6 +14,11 @@ export default function LoginDoctor() {
                 placeholder="Senha"
             />
             <button>Entrar</button>
+            <div className="links-content">
+                    <div className="links-position">
+                        <a href="#">Esqueci minha senha</a>
+                    </div>
+                </div>
         </>
     )
 }
