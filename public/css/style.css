@@ -7833,15 +7833,33 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10%; }
+  margin-top: 5%; }
   #formWrapper form {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.7);
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     padding-top: 50px;
     border-radius: 20px; }
+    #formWrapper form .box-title {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center; }
+      #formWrapper form .box-title i {
+        font-size: 35px;
+        margin-bottom: 10px;
+        color: #5e89b0; }
+      #formWrapper form .box-title h2, #formWrapper form .box-title .h2 {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #5e89b0;
+        font-weight: 700; }
+      #formWrapper form .box-title h4, #formWrapper form .box-title .h4 {
+        font-size: 13px;
+        text-align: center;
+        font-weight: 700; }
     #formWrapper form input {
       width: 300px;
       height: 30px;
@@ -7853,6 +7871,8 @@ textarea.form-control-lg {
       background-color: #5c93da;
       font-size: 13px;
       padding-left: 10px; }
+      #formWrapper form input::placeholder {
+        color: #e4dfdf; }
     #formWrapper form button {
       width: 250px;
       height: 30px;
@@ -7864,11 +7884,48 @@ textarea.form-control-lg {
       background-size: 200% auto;
       transition: 0.5s;
       display: block;
-      box-shadow: 0 0 10px #eee;
+      box-shadow: 0px 0px 10px #e6e6e6;
       font-weight: 700; }
       #formWrapper form button:hover {
         background-position: right center;
         color: #444242;
         text-decoration: none; }
+    #formWrapper form .btn-grouping {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px;
+      padding: 10px; }
+      #formWrapper form .btn-grouping button {
+        width: 150px;
+        height: 28px;
+        border-radius: 7px;
+        background: white;
+        color: #000;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: baseline;
+        font-size: 15px;
+        border: 2px solid transparent; }
+        #formWrapper form .btn-grouping button:first-child {
+          margin-right: 10px; }
+      #formWrapper form .btn-grouping .actived {
+        background-image: linear-gradient(to right, #4c92c4 0%, #3CD3AD 51%, #4CB8C4 100%);
+        transition: 0.5s linear;
+        color: #fff;
+        animation: ShadowActived infinite alternate 1.5s linear;
+        border: 2px solid #fff; }
+    #formWrapper form .links-content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 30px; }
+      #formWrapper form .links-content .box-links {
+        width: 100%; }
+        #formWrapper form .links-content .box-links h5, #formWrapper form .links-content .box-links .h5 {
+          font-size: 13px; }
+      #formWrapper form .links-content .links-position {
+        display: flex;
+        justify-content: space-between;
+        width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
