@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useForm } from "react-hook-form";
 import LoginDoctor from "./LoginDoctor";
 import LoginPatient from "./LoginPatient";
 
@@ -7,21 +8,38 @@ import LoginPatient from "./LoginPatient";
 
 
 export default function FormLogin() {
-    const [currentLogin, setCurrentLogin] = useState("paciente")
+    const [currentLogin, setCurrentLogin] = useState("paciente");
+    const {register, handleSubmit, formState: {errors} } = useForm();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [show, setShow] = useState(false);
+
+    const onSubmit = data => {
+        alert(JSON.stringify(data));
+        setPassword("")
+        setEmail("")
+      
+
+    }
+    const handleClick = (e) => {
+        setShow(!show)
+        e.preventDefault()
+     
+    }
+
 
     useEffect(() => {
         const HandleCurrentLogin = (login) => {
             setCurrentLogin(login)
         }
-
     });
     return (
         <div id="formWrapper">
-            <form>
-                <div className="box-title">
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="box-title mobile-hide container">
                     <i className="fas fa-notes-medical"></i>
                     <h2>Portal de Exames</h2>
-                    <h4>Para ter acesso ao portal de exames, <br />informe abaixo suas credenciais<br /> como paciente ou como médico.</h4>
+                    <h4>Para ter acesso ao portal de exames, informe abaixo suas credenciais como paciente ou como médico.</h4>
                 </div>
 
                 <div className="btn-grouping">
@@ -40,8 +58,8 @@ export default function FormLogin() {
                         Médico
                     </button>
                 </div>
-                {currentLogin === "paciente" && <LoginPatient />}
-                {currentLogin === "medico" && <LoginDoctor />}
+                {currentLogin === "paciente" && <LoginPatient show={show} handleClick={handleClick} />}
+                {currentLogin === "medico" && <LoginDoctor show={show} handleClick={handleClick}/>}
              
             </form>
         </div>

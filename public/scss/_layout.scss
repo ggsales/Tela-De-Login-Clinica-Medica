@@ -2,6 +2,7 @@
 
 .video-box{
     position: relative;
+  
     & .overlay-bg{
         background: rgba(0,0,0, 0.6);
         position: absolute;
@@ -16,11 +17,30 @@
     right: 0;
     bottom: 0;
     object-fit: cover;
-    height: 100vh;
-    @media #{$sm}{
-        height: 700px
+    @media #{ $xs, $sm, $md}{
+        object-fit: contain;
+        height: 100%;
      }
-     @media #{$xs-v}{
-       height: 700px;
+     @media #{ $lg, $xl, $xxl}{
+        height: 100vh;
      }
+
+}
+
+
+.layout-form-mobile{
+    position: relative;
+    
+}
+
+.mobile-hide{
+    @media #{$xs, $sm, $md}{
+        display: none;
+    }
+}
+.desktop-hide{
+    @media #{$lg, $xl, $xxl}{
+        display: none;
+    }
+
 }
