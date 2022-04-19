@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form";
-import LoginDoctor from "./LoginDoctor";
-import LoginPatient from "./LoginPatient";
+import Login from "../FormPages/Login";
+
 
 
 
@@ -58,8 +58,7 @@ export default function FormLogin() {
                         Médico
                     </button>
                 </div>
-                {currentLogin === "paciente" && <LoginPatient show={show} handleClick={handleClick} />}
-                {currentLogin === "medico" && <LoginDoctor show={show} handleClick={handleClick}/>}
+                {currentLogin && <Login show={show} handleClick={handleClick} errors={errors} register={register} currentLogin={currentLogin} />}
              
             </form>
         </div>

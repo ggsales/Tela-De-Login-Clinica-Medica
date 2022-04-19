@@ -7905,7 +7905,8 @@ body {
           width: 340px;
           height: 35px;
           margin-left: 5px;
-          margin-right: 5px; } }
+          margin-right: 5px;
+          box-shadow: 0px 0px 4px #646464; } }
       @media (max-width: 321px) {
         #formWrapper form input {
           width: 310px;
@@ -7917,13 +7918,32 @@ body {
           width: 500px;
           height: 35px;
           margin-left: 5px;
-          margin-right: 5px; } }
+          margin-right: 5px;
+          box-shadow: 0px 0px 4px #646464; } }
       @media (min-height: 1365px) {
         #formWrapper form input {
           width: 460px;
           height: 40px; } }
       #formWrapper form input::placeholder {
-        color: #e4dfdf; }
+        color: #6c6c6c;
+        font-weight: 600; }
+      #formWrapper form input:focus {
+        outline: 1px solid #181818; }
+    #formWrapper form .invalid {
+      margin-bottom: 10px;
+      background: #f2f2f2;
+      border: 2px solid #b42a2a; }
+      #formWrapper form .invalid::placeholder {
+        color: black; }
+      #formWrapper form .invalid:focus {
+        outline: none; }
+    #formWrapper form .errorMsg {
+      color: #b42a2a;
+      font-size: 12px;
+      text-align: left;
+      width: 100%;
+      margin-top: 0;
+      margin-left: 50px; }
     #formWrapper form .password-group {
       position: relative; }
       #formWrapper form .password-group i {
@@ -7940,8 +7960,11 @@ body {
       background-size: 200% auto;
       transition: 0.5s;
       display: block;
-      box-shadow: 0px 0px 10px #e6e6e6;
+      box-shadow: 0px 0px 5px #646464;
       font-weight: 700; }
+      @media only screen and (min-width: 992px) and (max-width: 1200px), only screen and (min-width: 1201px) and (max-width: 1399px), only screen and (min-width: 1400px) {
+        #formWrapper form button {
+          box-shadow: none; } }
       @media (min-height: 1365px) {
         #formWrapper form button {
           width: 280px;
@@ -7975,7 +7998,8 @@ body {
         justify-content: space-evenly;
         align-items: baseline;
         font-size: 15px;
-        border: 2px solid transparent; }
+        border: 2px solid transparent;
+        box-shadow: 0px 0px 10px #bcbcbc; }
         @media only screen and (min-width: 1400px) {
           #formWrapper form .btn-grouping button {
             height: 32px; } }

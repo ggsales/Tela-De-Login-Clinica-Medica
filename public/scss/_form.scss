@@ -64,6 +64,7 @@ body{
                 height: 35px;
                 margin-left: 5px;
                 margin-right: 5px;
+                box-shadow: 0px 0px 4px rgb(100, 100, 100);
              }
              @media #{$xs-mini}{
                 width: 310px;
@@ -76,15 +77,39 @@ body{
                 height: 35px;
                 margin-left: 5px;
                 margin-right: 5px;
+                box-shadow: 0px 0px 4px rgb(100, 100, 100);
              }
              @media #{$lg-h}{
                 width: 460px;
                 height: 40px; 
              }
-
-            &::placeholder{
-                color: rgb(228, 223, 223) ;
+             &::placeholder{
+                color: rgb(108, 108, 108);
+                font-weight: 600;
             }
+            &:focus{
+                outline: 1px solid rgb(24, 24, 24);
+            }
+
+        }
+        & .invalid{
+            margin-bottom: 10px;
+            background: rgb(242, 242, 242);
+            border: 2px solid rgb(180, 42, 42) ;
+            &::placeholder{
+                color: rgb(0, 0, 0);
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+        & .errorMsg{
+            color: rgb(180, 42, 42);
+            font-size: 12px;
+            text-align: left;
+            width: 100%;
+            margin-top: 0;
+            margin-left: 50px;
         }
         & .password-group{
             position: relative;
@@ -106,8 +131,13 @@ body{
             background-size: 200% auto;
             transition: 0.5s;
             display: block;
-            box-shadow: 0px 0px 10px rgb(230, 230, 230);
+            box-shadow: 0px 0px 5px rgb(100, 100, 100);
             font-weight: 700;
+            @media #{$lg, $xl, $xxl}{
+                box-shadow: none;
+                
+             }
+
             @media #{$lg-h}{
                 width: 280px;
                 height: 35px;
@@ -150,6 +180,7 @@ body{
                 align-items: baseline;
                 font-size: 15px;
                 border: 2px solid transparent ;
+                box-shadow: 0px 0px 10px rgb(188, 188, 188);
                 @media #{$xxl}{
                     height: 32px;
                  }
