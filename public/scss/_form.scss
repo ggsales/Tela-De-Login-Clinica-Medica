@@ -413,17 +413,17 @@ body {
     }
 
     & h4 {
-        font-size: 13px;
+        font-size: 11px;
         text-align: center;
         font-weight: 700;
 
         @media #{$xxl} {
-            font-size: 16px;
+            font-size: 13px;
         }
 
         @media #{$xs, $sm, $md} {
             color: #000;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         @media #{$sm, $md} {

@@ -8148,16 +8148,16 @@ body {
       .box-title h2, .box-title .h2 {
         font-size: 28px; } }
   .box-title h4, .box-title .h4 {
-    font-size: 13px;
+    font-size: 11px;
     text-align: center;
     font-weight: 700; }
     @media only screen and (min-width: 1400px) {
       .box-title h4, .box-title .h4 {
-        font-size: 16px; } }
+        font-size: 13px; } }
     @media (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
       .box-title h4, .box-title .h4 {
         color: #000;
-        font-size: 16px; } }
+        font-size: 14px; } }
     @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
       .box-title h4, .box-title .h4 {
         font-size: 20px; } }

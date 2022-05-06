@@ -35,7 +35,7 @@ export default function FormRegister() {
                     <div className="box-title container">
                         <i className="fas fa-file-alt"></i>
                         <h2>Cadastro</h2>
-                        <h4>Cadastre-se agora para ter acesso em nossa área de exames</h4>
+                        <h4>Cadastre-se agora para ter acesso em nossa área de exames.</h4>
                     </div>
                     <input
                         type="text"
