@@ -7847,7 +7847,7 @@ textarea.form-control-lg {
 body {
   font-family: "Roboto", sans-serif; }
 
-#formWrapper {
+.formWrapper {
   position: absolute;
   top: 0;
   width: 100%;
@@ -7856,9 +7856,9 @@ body {
   align-items: center;
   height: 100%; }
   @media (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
-    #formWrapper {
+    .formWrapper {
       align-items: flex-start; } }
-  #formWrapper form {
+  .formWrapper form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7869,23 +7869,26 @@ body {
     padding-right: 5px;
     border-radius: 20px; }
     @media only screen and (min-width: 1400px) {
-      #formWrapper form {
+      .formWrapper form {
         padding-top: 60px;
         padding-bottom: 50px;
         padding-left: 10px;
         padding-right: 10px; } }
+    @media (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
+      .formWrapper form {
+        padding-top: 0px; } }
     @media (max-width: 321px) {
-      #formWrapper form {
-        padding-top: 30px;
+      .formWrapper form {
+        padding-top: 10px;
         padding-left: 0px;
         padding-right: 0; } }
     @media (min-height: 1365px) {
-      #formWrapper form {
+      .formWrapper form {
         padding-top: 80px;
         padding-bottom: 0;
         width: 500px;
         height: 750px; } }
-    #formWrapper form input {
+    .formWrapper form input {
       width: 300px;
       height: 30px;
       margin-left: 5px;
@@ -7897,60 +7900,60 @@ body {
       font-size: 13px;
       padding-left: 10px; }
       @media only screen and (min-width: 1400px) {
-        #formWrapper form input {
+        .formWrapper form input {
           width: 350px;
           height: 35px; } }
       @media (max-width: 575px) {
-        #formWrapper form input {
+        .formWrapper form input {
           width: 340px;
           height: 35px;
           margin-left: 5px;
           margin-right: 5px;
           box-shadow: 0px 0px 4px #646464; } }
       @media (max-width: 321px) {
-        #formWrapper form input {
+        .formWrapper form input {
           width: 310px;
           height: 35px;
           margin-left: 0;
           margin-right: 0; } }
       @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
-        #formWrapper form input {
+        .formWrapper form input {
           width: 500px;
           height: 35px;
           margin-left: 5px;
           margin-right: 5px;
           box-shadow: 0px 0px 4px #646464; } }
       @media (min-height: 1365px) {
-        #formWrapper form input {
+        .formWrapper form input {
           width: 460px;
           height: 40px; } }
-      #formWrapper form input::placeholder {
+      .formWrapper form input::placeholder {
         color: #6c6c6c;
         font-weight: 600; }
-      #formWrapper form input:focus {
+      .formWrapper form input:focus {
         outline: 1px solid #181818; }
-    #formWrapper form .invalid {
+    .formWrapper form .invalid {
       margin-bottom: 10px;
       background: #f2f2f2;
       border: 2px solid #b42a2a; }
-      #formWrapper form .invalid::placeholder {
+      .formWrapper form .invalid::placeholder {
         color: black; }
-      #formWrapper form .invalid:focus {
+      .formWrapper form .invalid:focus {
         outline: none; }
-    #formWrapper form .errorMsg {
+    .formWrapper form .errorMsg {
       color: #b42a2a;
       font-size: 12px;
       text-align: left;
       width: 100%;
       margin-top: 0;
       margin-left: 50px; }
-    #formWrapper form .password-group {
+    .formWrapper form .password-group {
       position: relative; }
-      #formWrapper form .password-group i {
+      .formWrapper form .password-group i {
         position: absolute;
         right: 15px;
         top: 10%; }
-    #formWrapper form button {
+    .formWrapper form button {
       width: 250px;
       height: 30px;
       color: #fff;
@@ -7963,32 +7966,32 @@ body {
       box-shadow: 0px 0px 5px #646464;
       font-weight: 700; }
       @media only screen and (min-width: 992px) and (max-width: 1200px), only screen and (min-width: 1201px) and (max-width: 1399px), only screen and (min-width: 1400px) {
-        #formWrapper form button {
+        .formWrapper form button {
           box-shadow: none; } }
       @media (min-height: 1365px) {
-        #formWrapper form button {
+        .formWrapper form button {
           width: 280px;
           height: 35px; } }
-      #formWrapper form button:hover {
+      .formWrapper form button:hover {
         background-position: right center;
         color: #444242;
         text-decoration: none; }
-    #formWrapper form .btn-grouping {
+    .formWrapper form .btn-grouping {
       display: flex;
       flex-direction: row;
       margin-bottom: 20px;
       padding: 10px; }
       @media only screen and (min-width: 1400px) {
-        #formWrapper form .btn-grouping {
+        .formWrapper form .btn-grouping {
           margin-bottom: 30px; } }
       @media (max-width: 321px) {
-        #formWrapper form .btn-grouping {
+        .formWrapper form .btn-grouping {
           padding: 0; } }
       @media (min-height: 1365px) {
-        #formWrapper form .btn-grouping {
+        .formWrapper form .btn-grouping {
           margin-top: 5%;
           margin-bottom: 6%; } }
-      #formWrapper form .btn-grouping button {
+      .formWrapper form .btn-grouping button {
         width: 150px;
         height: 28px;
         border-radius: 7px;
@@ -8001,64 +8004,75 @@ body {
         border: 2px solid transparent;
         box-shadow: 0px 0px 10px #bcbcbc; }
         @media only screen and (min-width: 1400px) {
-          #formWrapper form .btn-grouping button {
+          .formWrapper form .btn-grouping button {
             height: 32px; } }
-        #formWrapper form .btn-grouping button:first-child {
+        .formWrapper form .btn-grouping button:first-child {
           margin-right: 10px; }
         @media (max-width: 575px) {
-          #formWrapper form .btn-grouping button {
+          .formWrapper form .btn-grouping button {
             margin-top: 20px;
             width: 140px;
             height: 26px;
             font-size: 13px; } }
         @media (max-width: 321px) {
-          #formWrapper form .btn-grouping button {
+          .formWrapper form .btn-grouping button {
             margin-top: 20px;
             width: 130px;
             font-size: 12px;
             height: 25px; } }
         @media (min-height: 1365px) {
-          #formWrapper form .btn-grouping button {
+          .formWrapper form .btn-grouping button {
             width: 180px;
             height: 30px; } }
-      #formWrapper form .btn-grouping .actived {
+      .formWrapper form .btn-grouping .actived {
         background-image: linear-gradient(to right, #4c92c4 0%, #3CD3AD 51%, #4CB8C4 100%);
         transition: 0.5s linear;
         color: #fff;
         animation: ShadowActived infinite alternate 1.5s linear;
         border: 2px solid #fff; }
-    #formWrapper form .links-content {
+    .formWrapper form .links-content {
       display: flex;
       flex-direction: column;
       width: 100%;
       margin-top: 40px;
       padding: 10px; }
       @media only screen and (min-width: 1400px) {
-        #formWrapper form .links-content {
+        .formWrapper form .links-content {
           margin-top: 50px; } }
       @media (min-height: 1365px) {
-        #formWrapper form .links-content {
+        .formWrapper form .links-content {
           margin-top: 80px; } }
-      #formWrapper form .links-content h5, #formWrapper form .links-content .h5 {
+      .formWrapper form .links-content h5, .formWrapper form .links-content .h5 {
         font-size: 15px; }
         @media (min-height: 1365px) {
-          #formWrapper form .links-content h5, #formWrapper form .links-content .h5 {
+          .formWrapper form .links-content h5, .formWrapper form .links-content .h5 {
             font-size: 20px; } }
-      #formWrapper form .links-content .links-position {
+      .formWrapper form .links-content .links-position {
         display: flex;
         justify-content: space-between;
         width: 100%; }
-        #formWrapper form .links-content .links-position a {
+        .formWrapper form .links-content .links-position a {
           text-decoration: none;
           color: #4a7c9f;
           font-weight: 700;
           font-size: 13px; }
           @media (min-height: 1365px) {
-            #formWrapper form .links-content .links-position a {
+            .formWrapper form .links-content .links-position a {
               font-size: 16px; } }
-          #formWrapper form .links-content .links-position a:hover {
+          .formWrapper form .links-content .links-position a:hover {
             text-decoration: underline;
             color: #2291e0; }
+  .formWrapper .box-arrow {
+    width: 100%;
+    margin-left: 10px; }
+    @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 575px) {
+      .formWrapper .box-arrow {
+        margin-top: 5%; } }
+    .formWrapper .box-arrow .arrow-left {
+      text-align: left;
+      color: #2291e0;
+      text-decoration: none;
+      font-size: 30px; }
 
 .box-title {
   display: flex;
@@ -8116,7 +8130,7 @@ body {
         font-size: 16px; } }
     @media (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
       .box-title h4, .box-title .h4 {
-        color: #fff;
+        color: #000;
         font-size: 16px; } }
     @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
       .box-title h4, .box-title .h4 {

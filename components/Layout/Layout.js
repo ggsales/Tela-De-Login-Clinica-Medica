@@ -1,9 +1,16 @@
-import FormLogin from "../Elements/Form/FormLogin/FormLogin";
 
+import FormLogin from "../Elements/Form/FormPages/FormLogin";
+import { useRouter } from "next/router"
+import FormForgotPassword from "../Elements/Form/FormPages/FormForgotPassword";
+import FormRegister from "../Elements/Form/FormPages/FormRegister";
 
 
 
 export default function Layout({ children }) {
+    const router = useRouter()
+    const { slug } = router.query
+
+
     return (
 
         <>
@@ -16,13 +23,20 @@ export default function Layout({ children }) {
                     <div className="box-title desktop-hide container">
                         <i className="fas fa-notes-medical"></i>
                         <h2>Portal de Exames</h2>
-                        <h4>Para ter acesso ao portal de exames, informe abaixo suas credenciais como paciente ou como médico.</h4>
                     </div>
                 </div>
                 <div className="mobile-hide">
-                    <FormLogin/>
+                  {slug === undefined && <FormLogin/>}
+                  {slug === "esqueci-senha" && <FormForgotPassword/>}
+                  {slug === "cadastro" && <FormRegister/>}
                 </div>
-               
+
+                <div className="layout-form-mobile desktop-hide">
+                {slug === undefined && <FormLogin />}
+                {slug === "esqueci-senha" && <FormForgotPassword />}
+                {slug === "cadastro" && <FormRegister />}
+            </div>
+
             </div>
 
 
