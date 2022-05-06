@@ -15,8 +15,8 @@ export default function Layout({ children }) {
 
         <>
             <div className="video-box">
-                <video id='videoBG' muted autoPlay loop preload="none">
-                    <source src='assets/videos/bg.mp4' type='video/mp4' />
+                <video id='videoBG' muted autoPlay playsInline loop preload="none">
+                    <source src='assets/videos/bg.mp4' type='video/mp4'  />
                 </video>
 
                 <div className="overlay-bg">
