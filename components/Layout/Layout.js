@@ -20,7 +20,7 @@ export default function Layout({ children }) {
                 </video>
 
                 <div className="overlay-bg">
-                    <div className="box-title desktop-hide container">
+                    <div className="box-title__2 desktop-hide container">
                         <i className="fas fa-notes-medical"></i>
                         <h2>Portal de Exames</h2>
                     </div>

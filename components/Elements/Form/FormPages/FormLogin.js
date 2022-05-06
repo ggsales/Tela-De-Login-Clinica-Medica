@@ -11,11 +11,13 @@ export default function FormLogin() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [show, setShow] = useState(false);
+  
 
     const onSubmit = data => {
         alert(JSON.stringify(data));
         setPassword("")
         setEmail("")
+        
     }
     const handleClick = (e) => {
         setShow(!show)

@@ -48,9 +48,9 @@ body {
 
         @media #{$lg-h} {
             padding-top: 80px;
-            padding-bottom: 0;
+            padding-bottom: 50px;
             width: 500px;
-            height: 750px;
+            height: auto;
         }
 
         & input {
@@ -129,7 +129,8 @@ body {
             text-align: left;
             width: 100%;
             margin-top: 0;
-            margin-left: 50px;
+            margin-left: 10px;  
+
         }
 
         & .password-group {
@@ -301,21 +302,56 @@ body {
         @media #{$sm, $md, $xs} {
             margin-top: 5%;
         }
+        @media #{$xs-mini} {
+            margin-left: 0;
+        }
         & .arrow-left {
             text-align: left;
             color: #2291e0;
             text-decoration: none;
             font-size: 30px;
+
+            &:hover{
+                color: #4fa0db;
+            }
         }
     }
 
 }
 
-.box-title {
+.box-title{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    &__2{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        @media #{$xs} {
+            margin-top: 10%;
+        }
+        @media #{$sm, $md} {
+            margin-top: 15%;
+        }
+        
+    & i {
+        font-size: 45px;
+        margin-bottom: 10px;
+        color: rgb(94, 137, 176);
+        margin-bottom: 5%;
+    }
+
+    & h2 {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: rgb(94, 137, 176);
+        font-weight: 700;
+    }
+
+    }
 
     @media #{$lg, $xl} {
         max-width: 300px;
@@ -335,7 +371,7 @@ body {
     }
 
     @media #{$sm, $md} {
-        margin-top: 15%;
+        margin-top: 7%;
     }
 
     & i {
@@ -400,7 +436,6 @@ body {
     }
 
 
-
 }
 
 .mobile-hide {
@@ -415,3 +450,39 @@ body {
     }
 
 }
+
+.box-sucess{
+    width: 350px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: SucessAnimation linear 0.7s ;
+
+
+    & i{
+        font-size: 50px;
+        color: rgb(26, 163, 49);
+        margin-bottom: 10px;
+        @media #{$xs, $sm, $md} {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+    }
+    & p{
+        text-align: center;
+        font-weight: 700;
+    }
+}
+
+
+
+@keyframes SucessAnimation{
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+

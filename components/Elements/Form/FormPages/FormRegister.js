@@ -10,11 +10,12 @@ export default function FormRegister() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [show, setShow] = useState(false);
+    const [formSucess, setSucess] = useState(false)
 
     const onSubmit = data => {
-        alert(JSON.stringify(data));
         setEmail("")
         setPassword("")
+        setSucess(!formSucess)
     }
 
     const handleClick = (e) => {
@@ -27,14 +28,14 @@ export default function FormRegister() {
 
         <>
             <div className="formWrapper">
-                <form onSubmit={handleSubmit(onSubmit)}>
+                {!formSucess && <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="box-arrow">
                         <Link href={"/"}><a className="fas fa-chevron-left arrow-left"></a></Link>
                     </div>
                     <div className="box-title container">
                         <i className="fas fa-file-alt"></i>
                         <h2>Cadastro</h2>
-                        <h4>Cadastre-se agora para ter acesso em nossa area de exames</h4>
+                        <h4>Cadastre-se agora para ter acesso em nossa área de exames</h4>
                     </div>
                     <input
                         type="text"
@@ -45,8 +46,10 @@ export default function FormRegister() {
                             minLength: 4
                         })}
                     />
-                    {errors?.name?.type === "required" && <p className="errorMsg">*Campo obrigatório!</p>}
-                    {errors?.name?.type === "minLength" && <p className="errorMsg">*O numero mínimo de caracteres é 4</p>}
+                    <div className="container">
+                        {errors?.name?.type === "required" && <p className="errorMsg">*Campo obrigatório!</p>}
+                        {errors?.name?.type === "minLength" && <p className="errorMsg">*O numero mínimo de caracteres é 4</p>}
+                    </div>
 
                     <input
                         type="text"
@@ -57,8 +60,10 @@ export default function FormRegister() {
                             pattern: /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
                         })}
                     />
-                    {errors?.email?.type === "required" && <p className="errorMsg">*Campo obrigatório!</p>}
-                    {errors?.email?.type === "pattern" && <p className="errorMsg">Insira um formato de E-mail válido.</p>}
+                    <div className="container">
+                        {errors?.email?.type === "required" && <p className="errorMsg">*Campo obrigatório!</p>}
+                        {errors?.email?.type === "pattern" && <p className="errorMsg">Insira um formato de E-mail válido.</p>}
+                    </div>
 
                     <div className="password-group">
                         <input
@@ -76,11 +81,25 @@ export default function FormRegister() {
                             <i className="fas fa-eye-slash" onClick={handleClick} />
                         )}
                     </div>
-                    {errors?.password?.type === "required" && <p className="errorMsg">*Campo obrigatório</p>}
-                    {errors?.password?.type === "minLength" && <p className="errorMsg">A senha deve conter no mínimo 8 caracteres</p>}
+                    <div className="container">
+                        {errors?.password?.type === "required" && <p className="errorMsg">*Campo obrigatório</p>}
+                        {errors?.password?.type === "minLength" && <p className="errorMsg">A senha deve conter no mínimo 8 caracteres</p>}
+                    </div>
+
 
                     <button type="submit">Entrar</button>
-                </form>
+                </form>}
+                {formSucess &&
+                    <div className="box-sucess">
+                        <div className="box-arrow">
+                            <Link href={"/"}><a className="fas fa-chevron-left arrow-left"></a></Link>
+                        </div>
+                        <i className="fas fa-check-circle" />
+                        <div className="container">
+                            <p>Cadastro realizado com sucesso! retorne para fazer o login.</p>
+                        </div>
+                    </div>
+                }
             </div>
         </>
     )

@@ -7885,9 +7885,9 @@ body {
     @media (min-height: 1365px) {
       .formWrapper form {
         padding-top: 80px;
-        padding-bottom: 0;
+        padding-bottom: 50px;
         width: 500px;
-        height: 750px; } }
+        height: auto; } }
     .formWrapper form input {
       width: 300px;
       height: 30px;
@@ -7946,7 +7946,7 @@ body {
       text-align: left;
       width: 100%;
       margin-top: 0;
-      margin-left: 50px; }
+      margin-left: 10px; }
     .formWrapper form .password-group {
       position: relative; }
       .formWrapper form .password-group i {
@@ -8068,17 +8068,43 @@ body {
     @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 575px) {
       .formWrapper .box-arrow {
         margin-top: 5%; } }
+    @media (max-width: 321px) {
+      .formWrapper .box-arrow {
+        margin-left: 0; } }
     .formWrapper .box-arrow .arrow-left {
       text-align: left;
       color: #2291e0;
       text-decoration: none;
       font-size: 30px; }
+      .formWrapper .box-arrow .arrow-left:hover {
+        color: #4fa0db; }
 
 .box-title {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center; }
+  .box-title__2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
+    @media (max-width: 575px) {
+      .box-title__2 {
+        margin-top: 10%; } }
+    @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
+      .box-title__2 {
+        margin-top: 15%; } }
+    .box-title__2 i {
+      font-size: 45px;
+      margin-bottom: 10px;
+      color: #5e89b0;
+      margin-bottom: 5%; }
+    .box-title__2 h2, .box-title__2 .h2 {
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #5e89b0;
+      font-weight: 700; }
   @media only screen and (min-width: 992px) and (max-width: 1200px), only screen and (min-width: 1201px) and (max-width: 1399px) {
     .box-title {
       max-width: 300px; } }
@@ -8093,7 +8119,7 @@ body {
       margin-top: 10%; } }
   @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
     .box-title {
-      margin-top: 15%; } }
+      margin-top: 7%; } }
   .box-title i {
     font-size: 35px;
     margin-bottom: 10px;
@@ -8146,5 +8172,33 @@ body {
 @media only screen and (min-width: 992px) and (max-width: 1200px), only screen and (min-width: 1201px) and (max-width: 1399px), only screen and (min-width: 1400px) {
   .desktop-hide {
     display: none; } }
+
+.box-sucess {
+  width: 350px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: SucessAnimation linear 0.7s; }
+  .box-sucess i {
+    font-size: 50px;
+    color: #1aa331;
+    margin-bottom: 10px; }
+    @media (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
+      .box-sucess i {
+        margin-top: 5%;
+        margin-bottom: 5%; } }
+  .box-sucess p {
+    text-align: center;
+    font-weight: 700; }
+
+@keyframes SucessAnimation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /*# sourceMappingURL=style.css.map */
