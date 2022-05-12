@@ -310,6 +310,11 @@ body {
                     @media #{$lg-h} {
                         margin-top: 2%;
                     }
+                    @media #{$xs, $sm, $md} {
+                        width: 18px;
+                        height: 18px;
+                    }
+                    
 
                     &:checked {
                         background: #2291e0;

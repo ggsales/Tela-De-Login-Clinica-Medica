@@ -8093,6 +8093,10 @@ body {
           @media (min-height: 1365px) {
             .formWrapper form .forget-password-box .checkbox-position input {
               margin-top: 2%; } }
+          @media (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
+            .formWrapper form .forget-password-box .checkbox-position input {
+              width: 18px;
+              height: 18px; } }
           .formWrapper form .forget-password-box .checkbox-position input:checked {
             background: #2291e0;
             background-image: url(../assets/img/verifica.png);
