@@ -7819,6 +7819,16 @@ textarea.form-control-lg {
     width: 100%;
     height: 100%;
     top: 0; }
+    @media (max-width: 575px) {
+      .video-box .overlay-bg {
+        object-fit: contain;
+        height: 100%;
+        border-radius: 0px 0px 40px 40px;
+        top: -2%; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
+      .video-box .overlay-bg {
+        top: -1%;
+        border-radius: 0px 0px 40px 40px; } }
 
 #videoBG {
   width: 100%;
@@ -7828,7 +7838,8 @@ textarea.form-control-lg {
   @media (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
     #videoBG {
       object-fit: contain;
-      height: 100%; } }
+      height: 100%;
+      border-radius: 0px 0px 40px 40px; } }
   @media only screen and (min-width: 992px) and (max-width: 1200px), only screen and (min-width: 1201px) and (max-width: 1399px), only screen and (min-width: 1400px) {
     #videoBG {
       height: 100vh; } }
@@ -7862,7 +7873,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
     padding-bottom: 30px;
     padding-top: 50px;
     padding-left: 5px;
@@ -7886,14 +7897,13 @@ body {
       .formWrapper form {
         padding-top: 80px;
         padding-bottom: 50px;
-        width: 500px;
+        width: 400px;
         height: auto; } }
     .formWrapper form input {
-      width: 300px;
+      width: 280px;
       height: 30px;
       margin-left: 5px;
       margin-right: 5px;
-      margin-bottom: 30px;
       border-radius: 10px;
       border: none;
       background-color: #5c93da;
@@ -7901,31 +7911,31 @@ body {
       padding-left: 10px; }
       @media only screen and (min-width: 1400px) {
         .formWrapper form input {
-          width: 350px;
+          width: 300px;
           height: 35px; } }
       @media (max-width: 575px) {
         .formWrapper form input {
-          width: 340px;
+          width: 300px;
           height: 35px;
           margin-left: 5px;
           margin-right: 5px;
           box-shadow: 0px 0px 4px #646464; } }
       @media (max-width: 321px) {
         .formWrapper form input {
-          width: 310px;
+          width: 270px;
           height: 35px;
           margin-left: 0;
           margin-right: 0; } }
       @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
         .formWrapper form input {
-          width: 500px;
+          width: 350px;
           height: 35px;
           margin-left: 5px;
           margin-right: 5px;
           box-shadow: 0px 0px 4px #646464; } }
       @media (min-height: 1365px) {
         .formWrapper form input {
-          width: 460px;
+          width: 350px;
           height: 40px; } }
       .formWrapper form input::placeholder {
         color: #6c6c6c;
@@ -7952,7 +7962,17 @@ body {
       .formWrapper form .password-group i {
         position: absolute;
         right: 15px;
-        top: 10%; }
+        top: 58%; }
+      .formWrapper form .password-group .forgot-page-icon {
+        position: absolute;
+        right: 15px;
+        top: 30%; }
+      .formWrapper form .password-group-2 {
+        position: relative; }
+        .formWrapper form .password-group-2 i {
+          position: absolute;
+          right: 15px;
+          top: 13%; }
     .formWrapper form button {
       width: 250px;
       height: 30px;
@@ -7968,9 +7988,18 @@ body {
       @media only screen and (min-width: 992px) and (max-width: 1200px), only screen and (min-width: 1201px) and (max-width: 1399px), only screen and (min-width: 1400px) {
         .formWrapper form button {
           box-shadow: none; } }
+      @media (max-width: 575px) {
+        .formWrapper form button {
+          width: 280px; } }
+      @media (max-width: 321px) {
+        .formWrapper form button {
+          width: 250px; } }
+      @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
+        .formWrapper form button {
+          width: 320px; } }
       @media (min-height: 1365px) {
         .formWrapper form button {
-          width: 280px;
+          width: 290px;
           height: 35px; } }
       .formWrapper form button:hover {
         background-position: right center;
@@ -7992,7 +8021,7 @@ body {
           margin-top: 5%;
           margin-bottom: 6%; } }
       .formWrapper form .btn-grouping button {
-        width: 150px;
+        width: 120px;
         height: 28px;
         border-radius: 7px;
         background: white;
@@ -8017,12 +8046,16 @@ body {
         @media (max-width: 321px) {
           .formWrapper form .btn-grouping button {
             margin-top: 20px;
-            width: 130px;
+            width: 110px;
             font-size: 12px;
             height: 25px; } }
+        @media only screen and (min-width: 992px) and (max-width: 1200px) {
+          .formWrapper form .btn-grouping button {
+            width: 120px;
+            height: 30px; } }
         @media (min-height: 1365px) {
           .formWrapper form .btn-grouping button {
-            width: 180px;
+            width: 150px;
             height: 30px; } }
       .formWrapper form .btn-grouping .actived {
         background-image: linear-gradient(to right, #4c92c4 0%, #3CD3AD 51%, #4CB8C4 100%);
@@ -8030,38 +8063,115 @@ body {
         color: #fff;
         animation: ShadowActived infinite alternate 1.5s linear;
         border: 2px solid #fff; }
-    .formWrapper form .links-content {
+    .formWrapper form .forget-password-box {
+      margin-top: 14px;
+      padding: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-around; }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .formWrapper form .forget-password-box {
+          width: 500px; } }
+      .formWrapper form .forget-password-box .checkbox-position {
+        display: flex;
+        align-items: stretch; }
+        .formWrapper form .forget-password-box .checkbox-position input {
+          width: 15px;
+          height: 15px;
+          margin-top: 0%;
+          margin-bottom: 30px;
+          outline: none;
+          background-color: white;
+          border-radius: 50%;
+          vertical-align: middle;
+          border: 1px solid #ddd;
+          appearance: none;
+          -webkit-appearance: none;
+          cursor: pointer; }
+          @media (min-height: 1365px) {
+            .formWrapper form .forget-password-box .checkbox-position input {
+              margin-top: 2%; } }
+          .formWrapper form .forget-password-box .checkbox-position input:checked {
+            background: #2291e0;
+            background-image: url(../assets/img/verifica.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #fff;
+            background-position-x: 1px; }
+        .formWrapper form .forget-password-box .checkbox-position label {
+          font-size: 9px;
+          font-weight: 600; }
+          @media (max-width: 321px) {
+            .formWrapper form .forget-password-box .checkbox-position label {
+              margin-left: 5px; } }
+          @media (min-height: 1365px) {
+            .formWrapper form .forget-password-box .checkbox-position label {
+              font-size: 15px; } }
+      .formWrapper form .forget-password-box a {
+        font-size: 11px;
+        color: #2291e0; }
+        @media (min-height: 1365px) {
+          .formWrapper form .forget-password-box a {
+            font-size: 15px; } }
+    .formWrapper form .register-link-box {
       display: flex;
       flex-direction: column;
       width: 100%;
-      margin-top: 40px;
-      padding: 10px; }
-      @media only screen and (min-width: 1400px) {
-        .formWrapper form .links-content {
-          margin-top: 50px; } }
+      margin-top: 0px;
+      padding: 10px;
+      justify-content: center;
+      align-items: center; }
       @media (min-height: 1365px) {
-        .formWrapper form .links-content {
-          margin-top: 80px; } }
-      .formWrapper form .links-content h5, .formWrapper form .links-content .h5 {
-        font-size: 15px; }
+        .formWrapper form .register-link-box {
+          margin-top: 10px; } }
+      .formWrapper form .register-link-box h5, .formWrapper form .register-link-box .h5 {
+        font-size: 11px; }
         @media (min-height: 1365px) {
-          .formWrapper form .links-content h5, .formWrapper form .links-content .h5 {
-            font-size: 20px; } }
-      .formWrapper form .links-content .links-position {
+          .formWrapper form .register-link-box h5, .formWrapper form .register-link-box .h5 {
+            font-size: 15px; } }
+        .formWrapper form .register-link-box h5 a, .formWrapper form .register-link-box .h5 a {
+          padding-left: 5px;
+          color: #2291e0; }
+    .formWrapper form .social-login {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      width: 200px; }
+      .formWrapper form .social-login span {
+        font-size: 11px;
+        margin-bottom: 10px; }
+        @media (min-height: 1365px) {
+          .formWrapper form .social-login span {
+            font-size: 13px; } }
+      .formWrapper form .social-login-position {
+        border-top: 1px solid #000;
         display: flex;
-        justify-content: space-between;
-        width: 100%; }
-        .formWrapper form .links-content .links-position a {
+        justify-content: space-around;
+        width: 100%;
+        padding-top: 10px; }
+        .formWrapper form .social-login-position .fa-facebook {
+          color: #4267B2; }
+          .formWrapper form .social-login-position .fa-facebook:hover {
+            color: #335cae; }
+        .formWrapper form .social-login-position .fa-linkedin {
+          color: #0A66C2; }
+          .formWrapper form .social-login-position .fa-linkedin:hover {
+            color: #1d4aa2; }
+        .formWrapper form .social-login-position .fa-google-plus {
+          color: #DB4437; }
+          .formWrapper form .social-login-position .fa-google-plus:hover {
+            color: #bc3225; }
+        .formWrapper form .social-login-position a {
           text-decoration: none;
-          color: #4a7c9f;
           font-weight: 700;
-          font-size: 13px; }
+          font-size: 30px; }
           @media (min-height: 1365px) {
-            .formWrapper form .links-content .links-position a {
-              font-size: 16px; } }
-          .formWrapper form .links-content .links-position a:hover {
-            text-decoration: underline;
-            color: #2291e0; }
+            .formWrapper form .social-login-position a {
+              font-size: 35px; } }
   .formWrapper .box-arrow {
     width: 100%;
     margin-left: 10px; }
@@ -8153,14 +8263,16 @@ body {
     font-weight: 700; }
     @media only screen and (min-width: 1400px) {
       .box-title h4, .box-title .h4 {
-        font-size: 13px; } }
+        font-size: 13px;
+        max-width: 310px; } }
     @media (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
       .box-title h4, .box-title .h4 {
         color: #000;
         font-size: 14px; } }
     @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
       .box-title h4, .box-title .h4 {
-        font-size: 20px; } }
+        font-size: 20px;
+        max-width: 500px; } }
     @media (min-height: 1365px) {
       .box-title h4, .box-title .h4 {
         font-size: 20px; } }
@@ -8200,5 +8312,8 @@ body {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+.mb-30 {
+  margin-bottom: 30px; }
 
 /*# sourceMappingURL=style.css.map */

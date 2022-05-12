@@ -30,7 +30,7 @@ export default function FormForgotPassword() {
                 <input
                     type="text"
                     placeholder="insira seu e-mail"
-                    className={`${errors.email && "invalid"}`}
+                    className={`mb-30 ${errors.email && "invalid"}`}
                     {...register("email", {
                         required: true,
                         pattern: /^[^ ]+@[^ ]+\.[a-z]{2,3}$/

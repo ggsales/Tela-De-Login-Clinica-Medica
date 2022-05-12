@@ -40,7 +40,7 @@ export default function FormRegister() {
                     <input
                         type="text"
                         placeholder="insira seu nome completo"
-                        className={`${errors.name && "invalid"}`}
+                        className={`mb-30 ${errors.name && "invalid"}`}
                         {...register("name", {
                             required: true,
                             minLength: 4
@@ -54,7 +54,7 @@ export default function FormRegister() {
                     <input
                         type="text"
                         placeholder="insira seu e-mail"
-                        className={`${errors.email && "invalid"}`}
+                        className={` mb-30 ${errors.email && "invalid"}`}
                         {...register("email", {
                             required: true,
                             pattern: /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
@@ -65,11 +65,11 @@ export default function FormRegister() {
                         {errors?.email?.type === "pattern" && <p className="errorMsg">Insira um formato de E-mail válido.</p>}
                     </div>
 
-                    <div className="password-group">
+                    <div className="password-group-2">
                         <input
                             type={show ? "text" : "password"}
                             placeholder="Senha"
-                            className={`${errors.password && "invalid"}`}
+                            className={`mb-30 ${errors.password && "invalid"}`}
                             {...register("password", {
                                 required: true,
                                 minLength: 8

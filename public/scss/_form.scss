@@ -22,7 +22,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.9);
         padding-bottom: 30px;
         padding-top: 50px;
         padding-left: 5px;
@@ -49,16 +49,15 @@ body {
         @media #{$lg-h} {
             padding-top: 80px;
             padding-bottom: 50px;
-            width: 500px;
+            width: 400px;
             height: auto;
         }
 
         & input {
-            width: 300px;
+            width: 280px;
             height: 30px;
             margin-left: 5px;
             margin-right: 5px;
-            margin-bottom: 30px;
             border-radius: 10px;
             border: none;
             background-color: rgb(92, 147, 218);
@@ -66,12 +65,12 @@ body {
             padding-left: 10px;
 
             @media #{$xxl} {
-                width: 350px;
+                width: 300px;
                 height: 35px;
             }
 
             @media #{$xs} {
-                width: 340px;
+                width: 300px;
                 height: 35px;
                 margin-left: 5px;
                 margin-right: 5px;
@@ -79,14 +78,14 @@ body {
             }
 
             @media #{$xs-mini} {
-                width: 310px;
+                width: 270px;
                 height: 35px;
                 margin-left: 0;
                 margin-right: 0;
             }
 
             @media #{$sm, $md} {
-                width: 500px;
+                width: 350px;
                 height: 35px;
                 margin-left: 5px;
                 margin-right: 5px;
@@ -94,7 +93,7 @@ body {
             }
 
             @media #{$lg-h} {
-                width: 460px;
+                width: 350px;
                 height: 40px;
             }
 
@@ -106,6 +105,8 @@ body {
             &:focus {
                 outline: 1px solid rgb(24, 24, 24);
             }
+
+        
 
         }
 
@@ -129,7 +130,7 @@ body {
             text-align: left;
             width: 100%;
             margin-top: 0;
-            margin-left: 10px;  
+            margin-left: 10px;
 
         }
 
@@ -139,8 +140,23 @@ body {
             & i {
                 position: absolute;
                 right: 15px;
-                top: 10%
+                top: 58%
             }
+            & .forgot-page-icon {
+                position: absolute;
+                right: 15px;
+                top: 30%;
+            }
+            &-2{
+                position: relative;
+
+                & i {
+                    position: absolute;
+                    right: 15px;
+                    top: 13%;
+                }
+            }
+        
         }
 
         & button {
@@ -158,11 +174,20 @@ body {
 
             @media #{$lg, $xl, $xxl} {
                 box-shadow: none;
-
             }
+            @media #{$xs} {
+                width: 280px;
+            }
+            @media #{$xs-mini} {
+                width: 250px;
+            }
+            @media #{$sm, $md} {
+                width: 320px;
+            }
+            
 
             @media #{$lg-h} {
-                width: 280px;
+                width: 290px;
                 height: 35px;
 
             }
@@ -196,7 +221,7 @@ body {
             }
 
             & button {
-                width: 150px;
+                width: 120px;
                 height: 28px;
                 border-radius: 7px;
                 background: white;
@@ -225,13 +250,17 @@ body {
 
                 @media #{$xs-mini} {
                     margin-top: 20px;
-                    width: 130px;
+                    width: 110px;
                     font-size: 12px;
                     height: 25px;
                 }
+                @media #{$lg} {
+                    width: 120px;
+                    height: 30px;
+                }
 
                 @media #{$lg-h} {
-                    width: 180px;
+                    width: 150px;
                     height: 30px;
                 }
 
@@ -248,70 +277,178 @@ body {
 
         }
 
-        & .links-content {
-            display: flex;
-            flex-direction: column;
+        & .forget-password-box {
+            margin-top: 14px;
+            padding: 0;
             width: 100%;
-            margin-top: 40px;
-            padding: 10px;
-
-            @media #{$xxl} {
-                margin-top: 50px
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: space-around;
+            @media #{$md} {
+                width: 500px;
             }
 
-            @media #{$lg-h} {
-                margin-top: 80px;
+
+            & .checkbox-position {
+                display: flex;
+                align-items: stretch;
+
+                & input {
+                    width: 15px;
+                    height: 15px;
+                    margin-top: 0%;
+                    margin-bottom: 30px;
+                    outline: none;
+                    background-color: white;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                    border: 1px solid #ddd;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    cursor: pointer;
+                    @media #{$lg-h} {
+                        margin-top: 2%;
+                    }
+
+                    &:checked {
+                        background: #2291e0;
+                        background-image: url(../assets/img/verifica.png);
+                        background-position: center ;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        color: #fff;
+                        background-position-x: 1px;
+                    }
+                }
+
+                & label {
+                    font-size: 9px;
+                    font-weight: 600;
+                    @media #{$xs-mini} {
+                        margin-left: 5px ;
+                    }
+                    @media #{$lg-h} {
+                        font-size: 15px;
+                    }
+                }
+
             }
 
-            & h5 {
-                font-size: 15px;
-
+            & a {
+                font-size: 11px;
+                color: #2291e0;
                 @media #{$lg-h} {
-                    font-size: 20px;
+                    font-size: 15px;
                 }
             }
 
-            & .links-position {
+        }
+
+        & .register-link-box {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 0px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+
+            @media #{$lg-h} {
+                margin-top: 10px;
+            }
+
+            & h5 {
+                font-size: 11px;
+
+                @media #{$lg-h} {
+                    font-size: 15px;
+                }
+
+                & a {
+                    padding-left: 5px;
+                    color: #2291e0;
+                }
+            }
+        }
+
+        & .social-login {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+
+            & span{
+                font-size: 11px;
+                margin-bottom: 10px;
+                @media #{$lg-h} {
+                    font-size: 13px;
+                }
+    
+            }
+
+        
+
+            &-position{
+                border-top: 1px solid #000;
                 display: flex;
-                justify-content: space-between;
-                width: 100%;
+                justify-content: space-around;
+                width: 100% ;
+                padding-top: 10px;
+                & .fa-facebook{
+                    color: #4267B2;
+                    &:hover{
+                        color: #335cae;
+                    }
+                }
+                & .fa-linkedin{
+                    color:  #0A66C2;
+                    &:hover{
+                        color:#1d4aa2
+                    }
+                }
+                & .fa-google-plus{
+                    color: #DB4437;
+                    &:hover{
+                        color: #bc3225;
+                    }
+
+                }
 
                 & a {
                     text-decoration: none;
-                    color: #4a7c9f;
                     font-weight: 700;
-                    font-size: 13px;
+                    font-size: 30px;
 
                     @media #{$lg-h} {
-                        font-size: 16px;
-                    }
-
-                    &:hover {
-                        text-decoration: underline;
-                        color: #2291e0;
+                        font-size: 35px;
                     }
                 }
             }
         }
     }
+    
 
     & .box-arrow {
         width: 100%;
         margin-left: 10px;
-        
+
         @media #{$sm, $md, $xs} {
             margin-top: 5%;
         }
+
         @media #{$xs-mini} {
             margin-left: 0;
         }
+
         & .arrow-left {
             text-align: left;
             color: #2291e0;
             text-decoration: none;
             font-size: 30px;
 
-            &:hover{
+            &:hover {
                 color: #4fa0db;
             }
         }
@@ -319,12 +456,14 @@ body {
 
 }
 
-.box-title{
+
+.box-title {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    &__2{
+
+    &__2 {
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -333,23 +472,24 @@ body {
         @media #{$xs} {
             margin-top: 10%;
         }
+
         @media #{$sm, $md} {
             margin-top: 15%;
         }
-        
-    & i {
-        font-size: 45px;
-        margin-bottom: 10px;
-        color: rgb(94, 137, 176);
-        margin-bottom: 5%;
-    }
 
-    & h2 {
-        font-size: 20px;
-        text-transform: uppercase;
-        color: rgb(94, 137, 176);
-        font-weight: 700;
-    }
+        & i {
+            font-size: 45px;
+            margin-bottom: 10px;
+            color: rgb(94, 137, 176);
+            margin-bottom: 5%;
+        }
+
+        & h2 {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: rgb(94, 137, 176);
+            font-weight: 700;
+        }
 
     }
 
@@ -416,9 +556,11 @@ body {
         font-size: 11px;
         text-align: center;
         font-weight: 700;
+        
 
         @media #{$xxl} {
             font-size: 13px;
+            max-width: 310px;
         }
 
         @media #{$xs, $sm, $md} {
@@ -428,6 +570,7 @@ body {
 
         @media #{$sm, $md} {
             font-size: 20px;
+            max-width: 500px;
         }
 
         @media #{$lg-h} {
@@ -451,7 +594,7 @@ body {
 
 }
 
-.box-sucess{
+.box-sucess {
     width: 350px;
     height: 250px;
     border-radius: 20px;
@@ -460,20 +603,22 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation: SucessAnimation linear 0.7s ;
+    animation: SucessAnimation linear 0.7s;
 
 
-    & i{
+    & i {
         font-size: 50px;
         color: rgb(26, 163, 49);
         margin-bottom: 10px;
+
         @media #{$xs, $sm, $md} {
             margin-top: 5%;
             margin-bottom: 5%;
         }
 
     }
-    & p{
+
+    & p {
         text-align: center;
         font-weight: 700;
     }
@@ -481,8 +626,16 @@ body {
 
 
 
-@keyframes SucessAnimation{
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
+@keyframes SucessAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
+.mb-30{
+    margin-bottom: 30px;
+}
